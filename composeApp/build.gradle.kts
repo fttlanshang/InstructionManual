@@ -36,10 +36,15 @@ kotlin {
         val desktopMain by getting
         
         androidMain.dependencies {
+            implementation(libs.koin.android)
+            implementation(libs.koin.androidx.compose)
             implementation(compose.preview)
             implementation(libs.androidx.activity.compose)
+            implementation(libs.androidx.lifecycle.viewmodel.compose)
         }
         commonMain.dependencies {
+            implementation(libs.koin.core)
+            implementation(libs.koin.compose)
             implementation(compose.runtime)
             implementation(compose.foundation)
             implementation(compose.material)

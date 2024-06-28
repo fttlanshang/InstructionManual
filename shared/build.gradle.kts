@@ -7,6 +7,8 @@ plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.sqldelight)
+    alias(libs.plugins.jetbrainsCompose)
+    alias(libs.plugins.compose.compiler)
 }
 
 sqldelight {
@@ -32,12 +34,18 @@ kotlin {
     jvm()
     
     sourceSets {
+        all {
+            languageSettings.optIn("kotlinx.cinterop.ExperimentalForeignApi")
+        }
         commonMain.dependencies {
             implementation(libs.koin.core)
             implementation(libs.koin.compose)
             implementation(libs.kotlinx.datetime)
             implementation(libs.primitive.adapters)
             implementation(libs.coroutines.extensions)
+            api(libs.kmp.observableviewmodel.core)
+            implementation(libs.kotlinx.collections.immutable)
+            implementation(compose.runtime) // TODO: check
         }
         androidMain.dependencies {
             implementation(libs.koin.android)
