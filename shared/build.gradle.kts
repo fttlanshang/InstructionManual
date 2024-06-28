@@ -45,7 +45,8 @@ kotlin {
             implementation(libs.coroutines.extensions)
             api(libs.kmp.observableviewmodel.core)
             implementation(libs.kotlinx.collections.immutable)
-            implementation(compose.runtime) // TODO: check
+            implementation(compose.runtime)
+            implementation(compose.foundation)
         }
         androidMain.dependencies {
             implementation(libs.koin.android)
