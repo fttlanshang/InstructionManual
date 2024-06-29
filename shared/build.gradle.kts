@@ -1,7 +1,6 @@
+
 import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
-import org.jetbrains.kotlin.gradle.targets.js.dsl.ExperimentalWasmDsl
-import org.jetbrains.kotlin.gradle.targets.js.webpack.KotlinWebpackConfig
 
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
@@ -47,11 +46,15 @@ kotlin {
             implementation(libs.kotlinx.collections.immutable)
             implementation(compose.runtime)
             implementation(compose.foundation)
+            implementation(compose.material)
+            implementation(compose.ui)
+            implementation(libs.kotlinx.coroutines.core)
         }
         androidMain.dependencies {
             implementation(libs.koin.android)
             implementation(libs.koin.androidx.compose)
             implementation(libs.android.driver)
+            implementation(libs.androidx.activity.compose)
         }
 
         iosMain.dependencies {
@@ -59,6 +62,7 @@ kotlin {
         }
         jvmMain.dependencies {
             implementation(libs.sqlite.driver)
+            implementation(libs.kotlinx.coroutines.swing)
         }
     }
 }

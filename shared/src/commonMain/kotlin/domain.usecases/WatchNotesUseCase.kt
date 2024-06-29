@@ -1,4 +1,4 @@
-package usecases.overview
+package domain.usecases
 
 import NotesRepository
 import comlanshanginstructionmanual.Note

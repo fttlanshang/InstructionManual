@@ -1,6 +1,9 @@
+
 import androidx.compose.runtime.Composable
-import org.koin.compose.KoinApplication
 import core.injection.mainModule
+import org.koin.compose.KoinApplication
+import ui.navigation.NavigationHost
+import ui.theme.AppTheme
 
 @Composable
 fun App() {
@@ -8,5 +11,8 @@ fun App() {
         modules(mainModule)
     }) {
         // The default composable content
+        AppTheme {
+            NavigationHost()
+        }
     }
 }

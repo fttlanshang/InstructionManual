@@ -1,4 +1,4 @@
-package navigation
+package ui.navigation
 
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow

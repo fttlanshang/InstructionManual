@@ -1,8 +1,9 @@
-package usecases.overview
+package notes.overview
 
 import com.rickclephas.kmp.observableviewmodel.ViewModel
 import com.rickclephas.kmp.observableviewmodel.coroutineScope
 import comlanshanginstructionmanual.Note
+import domain.usecases.WatchNotesUseCase
 import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.persistentListOf
 import kotlinx.collections.immutable.toImmutableList

@@ -25,3 +25,7 @@ We would appreciate your feedback on Compose/Web and Kotlin/Wasm in the public S
 If you face any issues, please report them on [GitHub](https://github.com/JetBrains/compose-multiplatform/issues).
 
 You can open the web application by running the `:composeApp:wasmJsBrowserDevelopmentRun` Gradle task.
+
+References:
+- https://medium.com/tech-takeaways/create-your-first-fully-cross-platform-mobile-app-with-compose-multiplatform-4-4-ui-layer-and-1e38754d257b
+- https://github.com/YanneckReiss/compose-multiplatform-notes-app/tree/main

@@ -1,4 +1,4 @@
-package usecases.create
+package domain.usecases
 
 import NotesRepository
 
